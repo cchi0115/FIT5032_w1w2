@@ -11,11 +11,12 @@
       <!-- Activity 6: Render a list containing author names and their birth years. Hint: Make use of the v-for directive to iterate through the array of authors. -->
       <!-- TODO: CODE TO RENDER LIST OF AUTHORS HERE -->
       <ul>
-        <li v-for="author in authors" :key="author.id">
-          <span v-if="author.name === 'George Orwell'" style="font-weight: bold">
-            {{ author.name }} ({{ author.birthYear }})
-          </span>
-          <span v-else> {{ author.name }} ({{ author.birthYear }})</span>
+        <li
+          v-for="author in authors"
+          :key="author.id"
+          :class="author.name == orwell.name ? 'highlight' : ''"
+        >
+          {{ author.name }} ({{ author.birthYear }})
         </li>
       </ul>
 
