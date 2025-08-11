@@ -3,22 +3,17 @@ import HelloWorld from './components/HelloWorld.vue'
 import MyName from './components/MyName.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import JSON from './components/JSON.vue'
+import Form from './components/Form.vue'
+import Button from './components/Button.vue'
+
+const handleClick = () => {
+  console.log('Button clicked!')
+}
 </script>
 
 <template>
-  <header>
-    <MyName />
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <!-- <TheWelcome /> -->
-    <JSON />
-  </main>
+  <!-- <JSON /> -->
+  <Form />
 </template>
 
 <style scoped>
